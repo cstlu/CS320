@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">{{ site.title }}</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">{{ content }}</h5>
+      </div>
+      <br>
+      <div class="section">
+    <div class="row">
+          <div class="carousel carousel-slider center" data-indicators="true" data-namespace="DIVcarouselcarousel-slider1" style="height: 600px;">
+          
+          <div class="carousel-item red white-text active" href="#one!" style="z-index: 0; opacity: 1; display: block; transform: translateX(0px) translateX(0px) translateX(0px) translateZ(0px);">
+            <h1>CF212</h1>
+            <h3 class="white-text"></h3>
+            <div class="carousel-fixed-item center with-indicators">
+            <img src="https://cdn-images-1.medium.com/max/1280/0*VipVYAeCBQSqs3NC.jpg" width="100%" />
+          </div>
+          </div>
+          <div class="carousel-item amber white-text" href="#two!" style="transform: translateX(0px) translateX(953.906px) translateZ(0px); z-index: -1; opacity: 1; display: block;">
+            <h1>Book</h1>
+            <h3 class="white-text"></h3>
+            <div class="carousel-fixed-item center with-indicators">
+            <img src="https://media.wiley.com/product_data/coverImage300/75/04703832/0470383275.jpg" height="100%" />
+          </div>
+          </div>
+        <ul class="indicators"><li class="indicator-item active"></li><li class="indicator-item"></li><li class="indicator-item"></li><li class="indicator-item"></li></ul></div>
+    </div>
+    <br>
+    <div class="row center">
+        <a href="https://elearning.thanglong.edu.vn" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+    </div>
+</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Course code: CF212</h5>
+
+            <p class="light"></p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Course credit:03</h5>
+
+            <p class="light"></p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">school</i></h2>
+            <h5 class="center">Thang Long University</h5>
+
+            <p class="light"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      
+    </div>
+    <div style="background: #ddd">
+    <div class="container last-post">
+    <section>
+        <h5>Latest Post</h5>
+        <ul class="collection">
+        {% for post in site.posts %}
+        <li class="collection-item avatar">
+          {% assign date_format = site.minima.date_format | default: "%m/%d" %}
+          <div class="date-post">{{ post.date | date: date_format }}</div>
+          <span class="title"><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
+          <p>
+             {{ post.content | truncatewords: 10 }}
+          </p>
+          <a href="{{ post.url | relative_url }}" class="secondary-content"><i class="material-icons">navigate_next</i></a>
+        </li>
+        {% endfor %}
+        </ul>  
+    </section>
+    </div>
+</div>
+
+  </div>
